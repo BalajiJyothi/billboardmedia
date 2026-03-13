@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BillboardMedia.co.in | Book Outdoor & Digital Billboards Across India</title>
+  <meta name="description" content="Discover and book outdoor hoardings & digital LED billboards across India. Verified locations, transparent pricing, quick proposals." />
+  <meta name="theme-color" content="#0b1c2d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#070f18;
+      --card:#0d1b2a;
+      --text:#eaf2ff;
+      --muted:#b7c4d8;
+      --line:rgba(255,255,255,.10);
+      --accent:#59d4ff;
+      --accent2:#8b5cff;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --r: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:
+      radial-gradient(900px 500px at 15% 5%, rgba(89,212,255,.18), transparent 60%),
+      radial-gradient(900px 600px at 85% 15%, rgba(139,92,255,.18), transparent 55%),
+      linear-gradient(180deg, #050b12 0%, #070f18 70%, #050b12 100%);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px, 92vw); margin:0 auto}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,15,24,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:12px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(89,212,255,.95), rgba(139,92,255,.95));
+      box-shadow: 0 10px 30px rgba(89,212,255,.25);
+      display:grid; place-items:center; font-weight:900;
+    }
+    .navlinks{display:flex; gap:18px; color:var(--muted); font-size:14px}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      padding:10px 14px;
+      border-radius: 12px;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border .15s ease;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, rgba(89,212,255,.95), rgba(139,92,255,.95));
+      box-shadow: 0 18px 35px rgba(89,212,255,.18);
+    }
+    .btn.primary:hover{filter:saturate(1.15)}
+    .btn.ghost{background:transparent;border:1px solid rgba(89,212,255,.35)}
+    .hamburger{display:none}
+
+    /* HERO */
+    .hero{padding: 34px 0 18px;}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; font-weight:700;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      padding:7px 10px;
+      border-radius: 999px;
+      color: rgba(234,242,255,.9);
+    }
+    .dot{width:8px;height:8px;border-radius:99px;background:#3ee98a; box-shadow:0 0 0 6px rgba(62,233,138,.10)}
+    h1{margin:12px 0 10px; font-size:38px; line-height:1.08}
+    .sub{margin:0 0 14px; color: var(--muted); font-size:15px; line-height:1.7}
+    .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size:12px; color: var(--muted);
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .pill b{color:var(--text); font-weight:800}
+
+    /* Hero images panel */
+    .imageGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .imgCard{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      overflow:hidden;
+      position:relative;
+      min-height: 160px;
+    }
+    .img{
+      position:absolute; inset:0;
+      background-size:cover;
+      background-position:center;
+      filter: saturate(1.05);
+      transform: scale(1.03);
+    }
+    .imgOverlay{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
+    }
+    .imgTag{
+      position:absolute; left:12px; bottom:12px;
+      font-size:12px; font-weight:800;
+      padding:8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.25);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Sections */
+    .section{padding: 18px 0;}
+    .sectionHead{
+      display:flex; justify-content:space-between; align-items:flex-end; gap:12px; flex-wrap:wrap;
+      margin: 8px 0 12px;
+    }
+    .sectionHead h2{margin:0; font-size:22px}
+    .sectionHead p{margin:0; color:var(--muted); font-size:13px; line-height:1.6; max-width:520px}
+
+    .listings{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .listing{
+      grid-column: span 4;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: var(--r);
+      overflow:hidden;
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+      display:flex; flex-direction:column;
+      min-height: 300px;
+    }
+    .thumb{
+      height: 140px;
+      position:relative;
+      background:#0b1623;
+    }
+    .thumb .img{transform:scale(1.05)}
+    .badge{
+      position:absolute; top:12px; left:12px;
+      font-size:11px; font-weight:900;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.20);
+      backdrop-filter: blur(8px);
+    }
+    .body{padding: 14px; display:flex; flex-direction:column; gap:10px; flex:1}
+    .rowTop{display:flex; justify-content:space-between; align-items:flex-start; gap:10px}
+    .title{margin:0; font-weight:900; font-size:15px; line-height:1.25}
+    .price{
+      font-weight:900; font-size:14px; white-space:nowrap;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+    .meta{display:flex; gap:8px; flex-wrap:wrap; color:var(--muted); font-size:12px}
+    .meta span{border:1px solid var(--line); background: rgba(255,255,255,.03); padding:6px 9px; border-radius:999px}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:auto}
+
+    .cta{
+      margin-top: 14px;
+      border:1px solid rgba(89,212,255,.22);
+      background: linear-gradient(135deg, rgba(89,212,255,.12), rgba(139,92,255,.10));
+      border-radius: var(--r);
+      padding: 16px;
+      display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+    }
+    .cta h3{margin:0; font-size:16px}
+    .cta p{margin:4px 0 0; color:var(--muted); font-size:13px; line-height:1.6; max-width:640px}
+
+    footer{
+      margin-top: 18px;
+      padding: 22px 0 34px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .undergoing{
+      margin-top:10px;
+      border:1px dashed rgba(255,209,102,.35);
+      background: rgba(255,209,102,.08);
+      color: rgba(255,209,102,.95);
+      padding: 10px 12px;
+      border-radius: 14px;
+      display:inline-flex; gap:10px; align-items:center;
+      font-weight:700;
+    }
+
+    /* Modal */
+    .overlay{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.62);
+      display:none; z-index:100;
+      padding: 18px;
+    }
+    .modal{
+      width:min(720px, 100%);
+      margin: 40px auto 0;
+      border-radius: 20px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(13,27,42,.95), rgba(11,22,35,.92));
+      box-shadow: 0 30px 90px rgba(0,0,0,.65);
+      overflow:hidden;
+    }
+    .mHead{
+      padding: 14px 16px;
+      border-bottom:1px solid var(--line);
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .mHead h3{margin:0; font-size:15px}
+    .x{
+      width:38px;height:38px;border-radius:12px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      color:var(--text);
+      cursor:pointer; font-weight:900;
+      display:grid; place-items:center;
+    }
+    .mBody{padding:16px}
+    label{display:block; font-size:12px; color:var(--muted); margin: 0 0 6px; font-weight:700}
+    input, select, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      outline:none;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    textarea{min-height:92px; resize: vertical}
+    .g2{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    .row{margin-top:12px}
+
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr}
+      .listing{grid-column: span 6}
+      h1{font-size:34px}
+    }
+    @media (max-width: 620px){
+      .navlinks{display:none}
+      .hamburger{display:inline-flex}
+      .g2{grid-template-columns:1fr}
+      .listing{grid-column: span 12}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <div class="logo">BM</div>
+          <div>
+            <div style="line-height:1.05">BillboardMedia<span style="color:rgba(234,242,255,.7)">.co.in</span></div>
+            <div style="font-size:11px;color:var(--muted);font-weight:700">Outdoor & Digital Billboard Marketplace</div>
+          </div>
+        </a>
+
+        <div class="navlinks">
+          <a href="#listings">Listings</a>
+          <a href="#how">How it works</a>
+          <a href="#owners">For Owners</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div style="display:flex; gap:10px; align-items:center">
+          <button class="btn ghost hamburger" id="menuBtn">☰</button>
+          <button class="btn" onclick="openModal('owner')">List Your Billboard</button>
+          <button class="btn primary" onclick="openModal('quote')">Request Quote</button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" style="display:none; padding: 0 0 12px;">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" style="width:100%; justify-content:center" href="#listings" onclick="toggleMenu(false)">Listings</a>
+          <a class="btn" style="width:100%; justify-content:center" href="#how" onclick="toggleMenu(false)">How it works</a>
+          <a class="btn" style="width:100%; justify-content:center" href="#owners" onclick="toggleMenu(false)">For Owners</a>
+          <a class="btn" style="width:100%; justify-content:center" href="#contact" onclick="toggleMenu(false)">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="card">
+            <div class="kicker"><span class="dot"></span> Verified inventory • Quick proposals • India-wide</div>
+            <h1>Billboards that people actually see. Book Outdoor & LED ads across India.</h1>
+            <p class="sub">
+              Discover prime hoardings, highway billboards, and digital LED screens.
+              Get transparent pricing and a media plan within 24–48 hours.
+            </p>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn primary" href="#listings">Explore Listings</a>
+              <button class="btn" onclick="openModal('quote')">Get Media Plan</button>
+              <button class="btn ghost" onclick="openModal('owner')">Become a Partner</button>
+            </div>
+
+            <div class="pills">
+              <div class="pill">✅ <b>Verified</b> locations</div>
+              <div class="pill">⚡ <b>24–48h</b> proposals</div>
+              <div class="pill">📍 <b>City + Highway</b> inventory</div>
+              <div class="pill">🧾 <b>Invoice</b> & proof support</div>
+            </div>
+          </div>
+
+          <!-- HERO VISUALS -->
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:12px;">
+              <div>
+                <div style="font-weight:900; font-size:16px">Real billboard visuals</div>
+                <div style="color:var(--muted); font-size:13px; line-height:1.5">
+                  Replace demo images with your own billboard photos anytime.
+                </div>
+              </div>
+              <button class="btn" onclick="openModal('quote')">Request Quote</button>
+            </div>
+
+            <div class="imageGrid">
+              <div class="imgCard">
+                <!-- Replace this URL with your own image -->
+                <div class="img" style="background-image:url('https://images.unsplash.com/photo-1486334803289-1623f249dd1e?auto=format&fit=crop&w=1200&q=70');"></div>
+                <div class="imgOverlay"></div>
+                <div class="imgTag">Highway Billboard</div>
+              </div>
+              <div class="imgCard">
+                <div class="img" style="background-image:url('https://images.unsplash.com/photo-1520975958225-5f61d1f52e75?auto=format&fit=crop&w=1200&q=70');"></div>
+                <div class="imgOverlay"></div>
+                <div class="imgTag">Digital LED Screen</div>
+              </div>
+              <div class="imgCard" style="grid-column: 1 / -1; min-height: 180px;">
+                <div class="img" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=70');"></div>
+                <div class="imgOverlay"></div>
+                <div class="imgTag">City Junction Hoarding</div>
+              </div>
+            </div>
+
+            <div style="margin-top:12px; color:var(--muted); font-size:12.5px; line-height:1.6">
+              Tip: Put your own images in <b>/images</b> folder and update these URLs to: <b>images/your-photo.jpg</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="listings">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Featured listings</h2>
+            <p>Simple cards with images + key details. Replace demo listings with real ones later.</p>
+          </div>
+          <button class="btn primary" onclick="openModal('quote')">Request Media Plan</button>
+        </div>
+
+        <div class="listings" id="listingsGrid"></div>
+
+        <div class="cta">
+          <div>
+            <h3>Need multiple cities?</h3>
+            <p>Share your budget, cities, and dates. We’ll send a shortlist + proposal fast.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn primary" onclick="openModal('quote')">Request Quote</button>
+            <button class="btn" onclick="openModal('owner')">List Inventory</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>How it works</h2>
+            <p>Short, clear, and trustworthy flow.</p>
+          </div>
+        </div>
+
+        <div class="listings" style="grid-template-columns: repeat(12, 1fr);">
+          <div class="listing" style="grid-column: span 3; min-height: 200px;">
+            <div class="body">
+              <p class="title">1) Shortlist</p>
+              <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">
+                Choose city, format, size, and budget.
+              </p>
+            </div>
+          </div>
+          <div class="listing" style="grid-column: span 3; min-height: 200px;">
+            <div class="body">
+              <p class="title">2) Confirm availability</p>
+              <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">
+                We verify dates and pricing with owners.
+              </p>
+            </div>
+          </div>
+          <div class="listing" style="grid-column: span 3; min-height: 200px;">
+            <div class="body">
+              <p class="title">3) Artwork & approvals</p>
+              <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">
+                We guide print/LED specs & compliance.
+              </p>
+            </div>
+          </div>
+          <div class="listing" style="grid-column: span 3; min-height: 200px;">
+            <div class="body">
+              <p class="title">4) Go live + proof</p>
+              <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">
+                Campaign runs with photo/video proof.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="owners">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>For billboard owners</h2>
+            <p>List your spaces and get qualified leads.</p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <div>
+            <h3>Partner with BillboardMedia</h3>
+            <p>Submit board details (photos, size, location, pricing). We verify before publishing.</p>
+          </div>
+          <button class="btn primary" onclick="openModal('owner')">List Your Billboard</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Contact</h2>
+            <p>Update these details once you set up email/WhatsApp for the business.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="g2">
+            <div>
+              <label>Business Email</label>
+              <input value="hello@billboardmedia.co.in" readonly />
+            </div>
+            <div>
+              <label>WhatsApp / Phone</label>
+              <input value="+91 XXXXXXXXXX" readonly />
+            </div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <button class="btn primary" onclick="openModal('quote')">Request Quote</button>
+            <button class="btn" onclick="openModal('owner')">List Inventory</button>
+          </div>
+
+          <div class="undergoing">⚠️ Website Undergoing Improvements — MVP live</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div class="logo">BM</div>
+            <div>
+              <div style="font-weight:900">BillboardMedia.co.in</div>
+              <div style="font-size:12px; color:var(--muted); font-weight:700">Outdoor & Digital Billboard Marketplace</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="#listings">Listings</a>
+            <a class="btn" href="#how">How it works</a>
+            <button class="btn primary" onclick="openModal('quote')">Request Quote</button>
+          </div>
+        </div>
+
+        <div class="undergoing">⚠️ Website Undergoing Improvements</div>
+        <div style="margin-top:10px; font-size:12px; opacity:.85">
+          © <span id="year"></span> BillboardMedia.co.in • All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Quote Modal -->
+  <div class="overlay" id="quoteModal">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="mHead">
+        <h3>Request a Quote / Media Plan</h3>
+        <button class="x" onclick="closeModal('quote')">✕</button>
+      </div>
+      <div class="mBody">
+        <div class="g2">
+          <div>
+            <label>Full Name</label>
+            <input id="qName" placeholder="Your name" />
+          </div>
+          <div>
+            <label>Company</label>
+            <input id="qCompany" placeholder="Brand / Company" />
+          </div>
+        </div>
+
+        <div class="g2 row">
+          <div>
+            <label>Email</label>
+            <input id="qEmail" placeholder="you@company.com" />
+          </div>
+          <div>
+            <label>Phone</label>
+            <input id="qPhone" placeholder="+91..." />
+          </div>
+        </div>
+
+        <div class="g2 row">
+          <div>
+            <label>Target Cities</label>
+            <input id="qCities" placeholder="Hyderabad, Pune, Bengaluru..." />
+          </div>
+          <div>
+            <label>Budget (₹/month)</label>
+            <input id="qBudget" placeholder="150000" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Campaign Details</label>
+          <textarea id="qMsg" placeholder="Dates, type (LED/static), areas, target audience..."></textarea>
+        </div>
+
+        <div class="row" style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn primary" onclick="sendEmail('quote')">Send Email</button>
+          <button class="btn" onclick="closeModal('quote')">Cancel</button>
+        </div>
+
+        <div style="margin-top:10px; color:var(--muted); font-size:12.5px; line-height:1.6">
+          MVP mode: opens your email app (mailto). Later we can connect forms to a database.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Owner Modal -->
+  <div class="overlay" id="ownerModal">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="mHead">
+        <h3>List Your Billboard (Owner)</h3>
+        <button class="x" onclick="closeModal('owner')">✕</button>
+      </div>
+      <div class="mBody">
+        <div class="g2">
+          <div>
+            <label>Owner / Company Name</label>
+            <input id="oName" placeholder="Owner name / agency" />
+          </div>
+          <div>
+            <label>Phone</label>
+            <input id="oPhone" placeholder="+91..." />
+          </div>
+        </div>
+
+        <div class="g2 row">
+          <div>
+            <label>City</label>
+            <input id="oCity" placeholder="Delhi" />
+          </div>
+          <div>
+            <label>Type</label>
+            <select id="oType">
+              <option>Static</option>
+              <option>Digital LED</option>
+              <option>Highway</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="g2 row">
+          <div>
+            <label>Size (ft)</label>
+            <input id="oSize" placeholder="40x20" />
+          </div>
+          <div>
+            <label>Expected Price (₹/month)</label>
+            <input id="oPrice" placeholder="120000" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Location Details</label>
+          <textarea id="oLoc" placeholder="Landmark, road name, visibility, etc."></textarea>
+        </div>
+
+        <div class="row" style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn primary" onclick="sendEmail('owner')">Submit</button>
+          <button class="btn" onclick="closeModal('owner')">Cancel</button>
+        </div>
+
+        <div style="margin-top:10px; color:var(--muted); font-size:12.5px; line-height:1.6">
+          We verify details before publishing publicly.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const TO_EMAIL = "hello@billboardmedia.co.in"; // change later
+
+    // Demo listing data (with images)
+    const LISTINGS = [
+      {
+        city: "Hyderabad",
+        area: "Hi-Tech City Junction",
+        type: "Digital LED",
+        size: "20x10",
+        price: 180000,
+        badge: "Verified",
+        img: "https://images.unsplash.com/photo-1545231097-cbd796f1d95e?auto=format&fit=crop&w=1400&q=70"
+      },
+      {
+        city: "Bengaluru",
+        area: "Airport Road Highway",
+        type: "Highway Billboard",
+        size: "40x20",
+        price: 250000,
+        badge: "Premium",
+        img: "https://images.unsplash.com/photo-1501691223387-dd0500403074?auto=format&fit=crop&w=1400&q=70"
+      },
+      {
+        city: "Mumbai",
+        area: "Western Express Highway",
+        type: "Static Hoarding",
+        size: "60x20",
+        price: 800000,
+        badge: "Premium",
+        img: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1400&q=70"
+      },
+      {
+        city: "Delhi",
+        area: "Ring Road Corridor",
+        type: "Static Hoarding",
+        size: "40x20",
+        price: 320000,
+        badge: "Verified",
+        img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=70"
+      },
+      {
+        city: "Pune",
+        area: "Baner Main Road",
+        type: "Digital LED",
+        size: "20x10",
+        price: 140000,
+        badge: "Verified",
+        img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1400&q=70"
+      },
+      {
+        city: "Chennai",
+        area: "OMR IT Corridor",
+        type: "Highway Billboard",
+        size: "40x20",
+        price: 220000,
+        badge: "Hot",
+        img: "https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?auto=format&fit=crop&w=1400&q=70"
+      }
+    ];
+
+    function moneyINR(n){
+      try { return n.toLocaleString("en-IN"); } catch { return String(n); }
+    }
+
+    function renderListings(){
+      const grid = document.getElementById("listingsGrid");
+      grid.innerHTML = "";
+      LISTINGS.forEach((x) => {
+        const el = document.createElement("div");
+        el.className = "listing";
+        el.innerHTML = `
+          <div class="thumb">
+            <div class="img" style="background-image:url('${x.img}')"></div>
+            <div class="imgOverlay"></div>
+            <div class="badge">${x.badge}</div>
+          </div>
+          <div class="body">
+            <div class="rowTop">
+              <p class="title">${x.city} • ${x.area}</p>
+              <div class="price">₹ ${moneyINR(x.price)}/mo</div>
+            </div>
+            <div class="meta">
+              <span>${x.type}</span>
+              <span>${x.size} ft</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary" onclick="prefillAndOpenQuote('${x.city}', '${x.area}', '${x.type}', '${x.size}', '${x.price}')">Request Quote</button>
+              <button class="btn" onclick="openModal('owner')">List Yours</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(el);
+      });
+    }
+
+    // Modals
+    const quoteModal = document.getElementById("quoteModal");
+    const ownerModal = document.getElementById("ownerModal");
+
+    function openModal(which){
+      if (which === "quote") quoteModal.style.display = "block";
+      if (which === "owner") ownerModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal(which){
+      if (which === "quote") quoteModal.style.display = "none";
+      if (which === "owner") ownerModal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    [quoteModal, ownerModal].forEach(ov => {
+      ov.addEventListener("click", (e) => {
+        if (e.target === ov){
+          ov.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+    });
+
+    function prefillAndOpenQuote(city, area, type, size, price){
+      openModal("quote");
+      const msg = document.getElementById("qMsg");
+      msg.value = `Interested in: ${city} • ${area}\nType: ${type}\nSize: ${size}\nExpected: ₹${price}/month\n\nDates: \nNotes: `;
+    }
+
+    function sendEmail(kind){
+      if (kind === "quote"){
+        const subject = encodeURIComponent("Billboard Quote Request");
+        const body = encodeURIComponent(
+`Quote Request
+
+Name: ${val("qName")}
+Company: ${val("qCompany")}
+Email: ${val("qEmail")}
+Phone: ${val("qPhone")}
+Target Cities: ${val("qCities")}
+Budget: ${val("qBudget")}
+
+Message:
+${val("qMsg")}
+
+— Sent from BillboardMedia.co.in`
+        );
+        window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
+        closeModal("quote");
+      } else {
+        const subject = encodeURIComponent("Owner Submission (List My Billboard)");
+        const body = encodeURIComponent(
+`Owner Submission
+
+Owner/Company: ${val("oName")}
+Phone: ${val("oPhone")}
+City: ${val("oCity")}
+Type: ${document.getElementById("oType").value}
+Size: ${val("oSize")}
+Expected Price: ${val("oPrice")}
+
+Location Details:
+${val("oLoc")}
+
+— Sent from BillboardMedia.co.in`
+        );
+        window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
+        closeModal("owner");
+      }
+    }
+
+    function val(id){ return (document.getElementById(id).value || "").trim(); }
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    function toggleMenu(force){
+      const show = typeof force === "boolean" ? force : (mobileMenu.style.display === "none");
+      mobileMenu.style.display = show ? "block" : "none";
+    }
+    menuBtn?.addEventListener("click", () => toggleMenu());
+
+    // Init
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderListings();
+  </script>
+</body>
+</html>

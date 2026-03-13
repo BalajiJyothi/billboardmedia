@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="/public/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/public/logo.png">
+<link rel="apple-touch-icon" href="/public/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BillboardMedia | Premium Outdoor Advertising & Digital Billboard Campaigns</title>
+  <meta name="description" content="BillboardMedia delivers premium outdoor advertising, digital billboard campaigns, LED media solutions, and high-visibility brand placements for ambitious businesses." />
+  <meta name="keywords" content="BillboardMedia, billboard advertising, digital billboards, outdoor advertising, LED advertising, media planning, brand visibility" />
+  <meta name="author" content="BillboardMedia" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <link rel="canonical" href="https://billboardmedia.co.in/" />
+
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BillboardMedia | Premium Outdoor Advertising & Digital Billboard Campaigns" />
+  <meta property="og:description" content="Make your brand impossible to ignore with premium billboard, LED, and outdoor advertising solutions." />
+  <meta property="og:url" content="https://billboardmedia.co.in/" />
+  <meta property="og:site_name" content="BillboardMedia" />
+  <meta property="og:image" content="https://billboardmedia.co.in/billboard.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BillboardMedia | Premium Outdoor Advertising & Digital Billboard Campaigns" />
+  <meta name="twitter:description" content="High-impact outdoor media and billboard campaigns for modern brands." />
+  <meta name="twitter:image" content="https://billboardmedia.co.in/billboard.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BillboardMedia",
+    "url": "https://billboardmedia.co.in/",
+    "logo": "https://billboardmedia.co.in/logo.png",
+    "description": "BillboardMedia provides premium outdoor advertising, digital billboard campaigns, and LED media solutions.",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Balaji Group of Industries"
+    }
+  }
+  </script>
+
+  <style>
+    .logo{
+width:48px;
+height:48px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 0 10px rgba(255,165,0,0.6);
+}
+    :root {
+      --bg: #0c0c0f;
+      --bg-soft: #131317;
+      --panel: rgba(255,255,255,0.04);
+      --line: rgba(255,255,255,0.08);
+      --text: #f6f2ea;
+      --muted: #b7aea2;
+      --accent: #f4a321;
+      --accent-soft: rgba(244, 163, 33, 0.14);
+      --shadow: 0 24px 60px rgba(0,0,0,0.35);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(244,163,33,0.08), transparent 20%),
+        linear-gradient(180deg, #0b0b0d 0%, #131317 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(12, 12, 15, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: 0.2px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(255,165,0,0.45);
+      border: 2px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      margin-left: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--accent), #ffb84d);
+      color: #18130b;
+      box-shadow: var(--shadow);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      background: rgba(255,255,255,0.02);
+      border-color: rgba(255,255,255,0.12);
+      color: var(--text);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 74px 0 62px;
+      background:
+        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+        url("/billboard.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(12,12,15,0.95) 0%, rgba(12,12,15,0.82) 42%, rgba(12,12,15,0.52) 100%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(244,163,33,0.18);
+      color: #ffd48a;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      max-width: 11ch;
+    }
+
+    .hero-highlight {
+      color: var(--accent);
+    }
+
+    .hero p {
+      margin: 0 0 28px;
+      max-width: 62ch;
+      color: #d0c7bb;
+      font-size: 1.06rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .hero-card,
+    .card,
+    .contact-card,
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244,163,33,0.18), transparent 70%);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      min-height: 540px;
+      background:
+        linear-gradient(rgba(10,10,12,0.22), rgba(10,10,12,0.4)),
+        url("/billboard.jpg");
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+
+    .mini-screen {
+      position: absolute;
+      right: 22px;
+      left: 22px;
+      bottom: 22px;
+      z-index: 2;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #111216;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .mini-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .mini-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .mini-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.24);
+    }
+
+    .mini-content {
+      padding: 28px 22px;
+    }
+
+    .mini-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(244,163,33,0.12);
+      border: 1px solid rgba(244,163,33,0.2);
+      color: #ffd48a;
+      font-size: 0.82rem;
+    }
+
+    .mini-content h3 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      line-height: 1.05;
+      max-width: 10ch;
+    }
+
+    .mini-content h3 span {
+      color: var(--accent);
+    }
+
+    .mini-content p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .mini-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .mini-button {
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .mini-button.primary {
+      background: var(--accent);
+      color: #17120b;
+    }
+
+    .mini-button.secondary {
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      padding: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 38px 0;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card,
+    .contact-card {
+      padding: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(244,163,33,0.08);
+      border: 1px solid rgba(244,163,33,0.18);
+      color: #ffd48a;
+      font-size: 0.82rem;
+    }
+
+    .card h3,
+    .contact-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+    }
+
+    .card p,
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta {
+      margin-top: 20px;
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(244,163,33,0.14), rgba(255,255,255,0.03));
+      border: 1px solid rgba(244,163,33,0.16);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .cta h3 {
+      margin: 0 0 6px;
+      font-size: 1.45rem;
+    }
+
+    .cta p {
+      margin: 0;
+      color: #d0c7bb;
+      max-width: 60ch;
+    }
+
+    .footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-wrap strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        padding: 12px 0;
+        align-items: flex-start;
+      }
+
+      .hero-image {
+        min-height: 460px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-inner {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+
+      .hero-actions,
+      .mini-buttons {
+        flex-direction: column;
+      }
+
+      .button,
+      .mini-button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      .hero-image {
+        min-height: 380px;
+      }
+
+      .mini-screen {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="BillboardMedia Home">
+        <img src="/public/logo.png" alt="BillboardMedia Logo" class="logo" />
+        <span class="brand-text">BillboardMedia</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="button button-primary">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Premium Outdoor Advertising • Digital Billboards • LED Media</div>
+          <h1>Your Brand, <span class="hero-highlight">Unmissable</span> on Every Street</h1>
+          <p>
+            BillboardMedia helps businesses launch premium outdoor advertising campaigns with digital billboards,
+            LED media, and strategic placements built for visibility, recall, and stronger brand presence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="button button-primary">Get a Campaign Quote</a>
+            <a href="#services" class="button button-secondary">Explore Services</a>
+          </div>
+
+          <div class="hero-note">A venture of Balaji Group of Industries.</div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Digital Reach</strong>
+              <span>Modern outdoor visibility for ambitious brands</span>
+            </div>
+            <div class="stat">
+              <strong>Premium Presence</strong>
+              <span>Professional campaigns designed to stand out</span>
+            </div>
+            <div class="stat">
+              <strong>Brand Recall</strong>
+              <span>Built for awareness, trust, and local impact</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-image">
+            <div class="mini-screen">
+              <div class="mini-topbar">
+                <div class="mini-dots"><span></span><span></span><span></span></div>
+                <div>billboardmedia.co.in</div>
+              </div>
+
+              <div class="mini-content">
+                <span class="mini-tag">Billboard Campaigns That Convert Attention</span>
+                <h3>Your Brand, <span>Visible</span> Everywhere</h3>
+                <p>
+                  Launch powerful outdoor campaigns with billboard advertising, LED screens,
+                  and brand placements that put your business in front of the right audience.
+                </p>
+                <div class="mini-buttons">
+                  <span class="mini-button primary">Get Started</span>
+                  <span class="mini-button secondary">View Services</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Outdoor advertising services that build visibility</h2>
+          <p>
+            BillboardMedia delivers bold media solutions for businesses that want to grow with stronger street-level presence and premium brand exposure.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <span class="tag">01</span>
+            <h3>Digital Billboard Advertising</h3>
+            <p>Dynamic screen-based advertising for modern, high-impact campaigns.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">02</span>
+            <h3>LED Media Campaigns</h3>
+            <p>Premium LED placements that improve visibility and audience attention.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">03</span>
+            <h3>Outdoor Brand Placement</h3>
+            <p>Strategic placements designed around exposure, traffic, and recall.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">04</span>
+            <h3>Campaign Planning</h3>
+            <p>Clear campaign direction for startups, local businesses, and brands.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why businesses choose BillboardMedia</h2>
+          <p>
+            Built to look premium, perform professionally, and give your brand the kind of visibility people remember.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <span class="tag">Brand Impact</span>
+            <h3>Designed for strong first impressions</h3>
+            <p>From website to campaign presentation, everything is built to feel polished and credible.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Scalable</span>
+            <h3>Fits startups and growing companies</h3>
+            <p>Ideal for businesses that want local visibility today and bigger campaigns tomorrow.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Group-backed</span>
+            <h3>Powered by Balaji Group of Industries</h3>
+            <p>Part of a larger business ecosystem focused on growth, media, and professional execution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>Simple process, professional execution</h2>
+          <p>Move from idea to launch with a clean campaign workflow.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <span class="tag">Step 1</span>
+            <h3>Share your goal</h3>
+            <p>Tell us what your brand wants to achieve, where you want visibility, and who you want to reach.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Step 2</span>
+            <h3>Get your plan</h3>
+            <p>Receive a campaign direction built around placement, message, and audience attention.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Step 3</span>
+            <h3>Launch the campaign</h3>
+            <p>Go live with billboard or LED-based media built to make your brand stand out.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Step 4</span>
+            <h3>Grow brand recall</h3>
+            <p>Turn visibility into awareness, stronger trust, and better market presence.</p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <div>
+            <h3>Ready to make your brand unmissable?</h3>
+            <p>Launch a billboard or outdoor media campaign with BillboardMedia and build stronger visibility where it matters most.</p>
+          </div>
+          <a href="#contact" class="button button-primary">Start With BillboardMedia</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact BillboardMedia</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="contact-card">
+            <h3>Business Enquiries</h3>
+            <p>Email: hello@billboardmedia.co.in</p>
+            <p>Phone: +91 7032412416</p>
+            <p>Website: billboardmedia.co.in</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Company Information</h3>
+            <p>BillboardMedia provides billboard advertising, LED media campaigns, and outdoor visibility solutions for modern businesses.</p>
+            <p>Part of Balaji Group of Industries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>BillboardMedia</strong><br />
+        <span>Premium outdoor advertising and digital billboard campaigns.</span>
+      </div>
+      <div>
+        <span>© 2026 BillboardMedia. All rights reserved.</span><br />
+        <span>A venture of Balaji Group of Industries.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
