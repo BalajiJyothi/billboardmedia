@@ -547,11 +547,7 @@ box-shadow:0 0 10px rgba(255,165,0,0.6);
         font-size: 20px;
       }
 
-      .logo {
-        width: 42px;
-        height: 42px;
-      }
-
+    
       .hero-image {
         min-height: 380px;
       }
@@ -562,25 +558,7 @@ box-shadow:0 0 10px rgba(255,165,0,0.6);
         bottom: 14px;
       }
     }
-.logo {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  flex-shrink: 0;
 
-  /* subtle glow for billboard feel */
-  box-shadow: 0 0 10px rgba(244,163,33,0.45);
-
-  /* smooth scaling */
-  transition: transform 0.25s ease;
-}
-
-/* hover effect */
-.brand:hover .logo {
-  transform: scale(1.05);
-}
 
     .brand {
   display: flex;
@@ -603,6 +581,12 @@ box-shadow:0 0 10px rgba(255,165,0,0.6);
     font-size: 20px;
   }
 
+}
+    .logo{
+  height:52px;        /* control height */
+  width:auto;         /* keep natural width */
+  object-fit:contain; /* prevent stretching */
+  display:block;
 }
     
   </style>
